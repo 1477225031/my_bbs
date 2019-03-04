@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="0150e746-8cc0-4103-b2a7-763b400d16af" name="ubuntu(家用)" url="http://192.168.0.111">
+        <fileTransfer host="192.168.0.111" port="22" rootFolder="/var/www/xuelei_project" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

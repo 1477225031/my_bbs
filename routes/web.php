@@ -16,3 +16,11 @@
 //});
 
 Route::get('/','PagesController@root')->name('root');
+Auth::routes(); //定义了脚手架的所有路由,注册,登录,修改密码等
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+//用户登录相关的路由
+
+
+Route::get('/home', 'HomeController@index')->name('home');
