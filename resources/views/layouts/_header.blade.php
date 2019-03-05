@@ -32,7 +32,7 @@
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" id="logout" href="#">
                             <form action="{{ route('logout') }}" method="POST">
-                                <!--{{ csrf_field() }}-->
+                                {{ csrf_field() }}
                                 <button class="btn btn-block btn-danger">退出</button>
                             </form>
                         </a>
