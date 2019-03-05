@@ -14,10 +14,15 @@ class EventServiceProvider extends ServiceProvider
      *
      * @var array
      */
+    //监听的以下事件
     protected $listen = [
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
+        \Illuminate\Auth\Events\Verified::class=> [
+            \App\Listeners\EmailVerified::class,
+        ],
+        
     ];
 
     /**

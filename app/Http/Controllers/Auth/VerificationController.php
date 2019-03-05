@@ -18,7 +18,7 @@ class VerificationController extends Controller
     |
     */
 
-    use VerifiesEmails;
+    use VerifiesEmails; //trait机制提前设定好功能,注入到控制器内部,控制器内部看着更干净
 
     /**
      * Where to redirect users after verification.
@@ -34,8 +34,8 @@ class VerificationController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
-        $this->middleware('signed')->only('verify');
-        $this->middleware('throttle:6,1')->only('verify', 'resend');
+        $this->middleware('auth'); //所有控制器都需要登录
+        $this->middleware('signed')->only('verify'); //路由签名
+        $this->middleware('throttle:6,1')->only('verify', 'resend');//1分钟6次
     }
 }

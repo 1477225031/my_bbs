@@ -16,7 +16,7 @@
 //});
 
 Route::get('/','PagesController@root')->name('root');
-Auth::routes(); //定义了脚手架的所有路由,注册,登录,修改密码等
+Auth::routes(['verify' => true]); //定义了脚手架的所有路由,注册,登录,修改密码等
 
 Route::get('/home', 'HomeController@index')->name('home');
 
