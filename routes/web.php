@@ -24,3 +24,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::get('/home', 'HomeController@index')->name('home');
+//用户展示,更新,修改
+Route::resource('users','UsersController',['only' => ['show','update','edit']]);
