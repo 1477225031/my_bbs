@@ -32,7 +32,7 @@ class UsersController extends Controller
                 $data['avatar'] = $result['path'];
             }
         }
-        dd($data);
+
         $user->update($data);
         return redirect()->route('users.show',$user->id)->with('success','资料更新成功');
     }
