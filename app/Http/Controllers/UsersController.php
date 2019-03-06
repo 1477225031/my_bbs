@@ -21,8 +21,6 @@ class UsersController extends Controller
     public function update(UserRequest $request,User $user)
     {
         //userRequest调整需要接收的值
-
-        dd($request->all());
         $user->update($request->all());
         return redirect()->route('users.show',$user->id)->with('success','资料更新成功');
     }
